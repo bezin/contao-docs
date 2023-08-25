@@ -36,9 +36,11 @@ namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Attribute\AsController:
 use Twig\Environment as TwigEnvironment;
 
 #[Route('/contao/my-backend-route', name: BackendController::class, defaults: ['_scope' => 'backend'])]
+#[AsController]
 class BackendController
 {
     private $twig;
